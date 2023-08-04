@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'بی‌نشان',
-  tagline: 'Free Internet',
+  tagline: 'از تحریم‌ها عبور کن',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -49,6 +49,8 @@ const config = {
     },
   },
 
+
+  
   presets: [
     [
       'classic',
@@ -71,7 +73,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+        gtag: {
+          trackingID: 'G-999X9XX9XX',
+          anonymizeIP: true,
+        },
+      }), 
     ],
   ],
 
@@ -81,9 +87,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'بی‌نشان',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'بی‌نشان',
           src: 'img/logo.svg',
         },
         items: [
@@ -91,14 +97,16 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'آموزش',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          {to: '/blog', label: 'بلاگ', position: 'left'},
+          {to: '/download', label: 'دانلود', position: 'left'},
+          {to: '/about', label: 'درباره‌', position: 'left'},
+          // {
+          //   href: 'https://github.com/facebook/docusaurus',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {
@@ -108,25 +116,24 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'آموزش استفاده',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'پشتیبانی',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'مشاهده وضعیت اشتراک',
+                href: '/status',
+              },{
+                label: 'دانلود',
+                href: '/download',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'کانال',
+                href: 'https://t.me/bineshan_net',
               },
             ],
           },
@@ -134,17 +141,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
+                label: 'بلاگ',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'قوانین و شرایط استفاده',
+                to: '/terms',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `ساخته شده با ❤️ برای مردم ایران.`,
       },
       prism: {
         theme: lightCodeTheme,
