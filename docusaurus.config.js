@@ -60,15 +60,15 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -89,13 +89,14 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'آموزش',
-          },
-          {to: '/blog', label: 'بلاگ', position: 'left'},
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'آموزش',
+          // },
+          {to: '/help', label: 'آموزش', position: 'left'},
+          // {to: '/blog', label: 'بلاگ', position: 'left'},
           {to: '/download', label: 'دانلود', position: 'left'},
           {to: '/about', label: 'درباره‌', position: 'left'},
           // {
@@ -136,10 +137,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'بلاگ',
-                to: '/blog',
-              },
+              // {
+              //   label: 'بلاگ',
+              //   to: '/blog',
+              // },
               {
                 label: 'قوانین و شرایط استفاده',
                 to: '/terms',
